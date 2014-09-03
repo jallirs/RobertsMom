@@ -31,11 +31,16 @@ if __name__ == '__main__':
 
 	#Your mom can have an array
 	robertsMom['likes'] = [0, 1 , 2 , 3]
+	robertsMom['hates'] = 'Yes She does'
 	
+	#your mom gives a good header
+	header['token'] = 'blah'
+	header['username'] = 'robertsmom'
+
 	#I'm googling your mom, Make your own header
 	robertsRealMom = google.makeRequest('POST',
 		json.dumps(robertsMom),
-		robertsMom
+		header
 	)
 	
 	responseFromGoogle = google.getResponse(robertsRealMom)
